@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class = "container">
+    <h3>ITMD 541 - LAB 3 - BHARGAVA SAI ATLA</h3>
+    <h1>Tip Calculator</h1>
+    <form action="" method="post">
+        <label for="billTotal">Bill Total:</label>
+        <input type="text" id="billTotal" name="billTotal" required>
+        <br>
+        <br>
+        <label for="tipRange">Tip:</label>
+        <input type="range" id="tipRange" name="tipRange" min="0" max="100">
+        <br>
+        <br>
+        <label for="tip">Tip Percentage:</label>
+        <input type="text" id="tipPercentage" name="tipPercentage" disabled class="disabled">
+        <br>
+        <br>
+        <label for="tipSlider">Tip Amount:</label>
+        <input type="text" id="tipAmount" name="tipAmount" disabled class="disabled">
+        <br>
+        <br>
+        <label for="totalBill">Total Bill with Tip:</label>
+        <input type="text" id="totalBill" name="totalBill" disabled class="disabled">
+        <br>
+    </form>
+</div>
+</body>
+</html>

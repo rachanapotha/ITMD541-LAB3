@@ -1,0 +1,52 @@
+.container{
+    width: 50%;
+    height: 50%;
+    padding: 20px 12px 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #f2f2f2;
+    max-width: 500px;
+    
+}
+body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin-top: 30px;
+    background-color: antiquewhite;
+}
+h1{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+.container label {
+    display: inline-block;
+    width: 25%;
+    text-align: right;
+    margin-right: 10px;
+}
+.container input {
+    display: inline-block;
+    width: 40%;
+}
+#tipPercentage{
+    background-color: lightblue;
+}
+#tipAmount{
+    background-color: lightcyan;
+}
+#totalBill{
+    background-color: lightgray;
+}
+.disabled:hover {
+    cursor: not-allowed;
+}
+@media (min-width: 100px) {
+    .container {
+        height: max-content;
+
+    }
+}
