@@ -1,52 +1,73 @@
-.container{
-    width: 50%;
-    height: 50%;
-    padding: 20px 12px 10px 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    text-align: center;
-    background-color: #f2f2f2;
-    max-width: 500px;
-    
-}
-body{
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 100vh;
-    margin-top: 30px;
-    background-color: antiquewhite;
+    margin: 0;
+    padding: 10px;
 }
-h1{
-    text-align: center;
-}
-h3{
-    text-align: center;
-}
-.container label {
-    display: inline-block;
-    width: 25%;
-    text-align: right;
-    margin-right: 10px;
-}
-.container input {
-    display: inline-block;
-    width: 40%;
-}
-#tipPercentage{
-    background-color: lightblue;
-}
-#tipAmount{
-    background-color: lightcyan;
-}
-#totalBill{
-    background-color: lightgray;
-}
-.disabled:hover {
-    cursor: not-allowed;
-}
-@media (min-width: 100px) {
-    .container {
-        height: max-content;
 
+.calculator {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; 
+    max-width: 400px; 
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="number"], input[type="text"], input[type="range"] .select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="text"] {
+    background-color: #e9ecef;
+}
+
+input[type="range"] {
+    margin-top: 10px;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+    .calculator {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    input[type="number"], input[type="text"], input[type="range"] {
+        font-size: 1em;
+    }
+
+    label {
+        font-size: 0.9em;
     }
 }

@@ -4,35 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tip Calculator</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link href="styles.css" rel="stylesheet">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class = "container">
-    <h3>ITMD 541 - LAB 3 - RACHANA POTHAM</h3>
-    <h1>Tip Calculator</h1>
-    <form action="" method="post">
-        <label for="billTotal">Bill Total:</label>
-        <input type="number" id="billTotal" name="billTotal" required>
-        <br>
-        <br>
-        <label for="tipRange">Tip:</label>
-        <input type="range" id="tipRange" name="tipRange" min="0" max="100">
-        <br>
-        <br>
-        <label for="tip">Tip Percentage:</label>
-        <input type="text" id="tipPercentage" name="tipPercentage" disabled class="disabled">
-        <br>
-        <br>
-        <label for="tipSlider">Tip Amount:</label>
-        <input type="text" id="tipAmount" name="tipAmount" disabled class="disabled">
-        <br>
-        <br>
-        <label for="totalBill">Total Bill with Tip:</label>
-        <input type="text" id="totalBill" name="totalBill" disabled class="disabled">
-        <br>
-    </form>
-</div>
+    <div class="calculator">
+        <h2>Tip Calculator</h2>
+
+        <label for="amount">Bill Total:</label>
+        <input type="number" id="amount" placeholder="Enter amount" oninput="calculateTip()" min="0">
+
+        <div id="errorMessage" class="error-message"></div>
+        
+        <label for="currency">Select Currency:</label>
+        <select id="currency" onchange="calculateTip()">
+            <option value="USD">Dollars (USD)</option>
+            <option value="INR">Indian Rupees (₹)</option>
+            <option value="JPY">Japanese Yen (¥)</option>
+        </select>
+
+        <label for="tipPercentage">Tip: <span id="tipValue">15</span>%</label>
+        <input type="range" id="tipPercentage" min="0" max="100" value="15" oninput="calculateTip()">
+        
+        <label for="tipPercentagetextBox">Tip Percentage</label>
+        <input type="text" id="displayTipPercentage" disabled>
+
+        <label for="tipAmount">Tip Amount:</label>
+        <input type="text" id="tipAmount" disabled>
+
+        <label for="totalAmount">Total Amount:</label>
+        <input type="text" id="totalAmount" disabled>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
